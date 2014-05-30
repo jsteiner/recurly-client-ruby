@@ -940,7 +940,7 @@ module Recurly
     protected
 
     def path
-      @href or @uri or if persisted?
+      @uri or if persisted?
         self.class.member_path to_param
       else
         self.class.collection_path
